@@ -1,0 +1,20 @@
+[project]
+name = "readme-translator-agent"
+version = "0.1.0"
+description = "A CLI tool to translate README files"
+readme = "README.md"
+requires-python = ">=3.13"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "emoji>=2.14.1",
+    "google-genai==1.12.1",
+    "python-dotenv==1.1.0",
+    "typer>=0.17.3",
+]
+
+[project.scripts]
+rta = "rta.main:app"
