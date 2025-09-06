@@ -13,14 +13,14 @@
 An **AI agent** as a command-line tool to translate READMEs from Portuguese to English.
 
 ## 🤔 Why did I create this?
-As a university student, almost every semester I have more than one project to do. These projects can, and should, be used as an expansion of my portfolio. As not everyone in the world speaks my native language, I decided to start writing the documentation in English as well, an international language. However, writing documentation twice is, for me, a waste of time. For a few days, I was thinking about a way to automate the process, until I came across the concept of *agents*. And that's how **rta** came about.
+As a university student, I have more than one project to do almost every semester. These projects can, and should, be used to expand my portfolio. Since not everyone in the world speaks my native language, I decided to start writing the documentation in English as well, an international language. However, writing documentation twice is, for me, a waste of time. For a few days I was thinking about a way to automate the process, until I came across the concept of *agents*. And that's how **rta** came about.
 
 ## 📸 Screenshots
 |   README.pt.md   | Terminal | README.md |
 |----------------|---------------------|---------------------|
 | ![pt](screenshots/pt.png) | ![terminal](screenshots/terminal.png) | ![en](screenshots/en.png) |
 
-## 📱 How it Works
+## 📱 How It Works
 1. Write in the `README.pt.md` file
 2. Run the command `rta README.pt.md`
 3. The `README.md` file is created/modified
@@ -52,7 +52,7 @@ git clone https://github.com/8126Lucas/README-translator-agent.git
 ```bash
 uv --version
 
-# If it is not installed
+# If not installed
 curl -LsSf https://astral.sh/uv/install.sh | less              # macOS and Linux
 powershell -c "irm https://astral.sh/uv/install.ps1 | more"    # Windows (Powershell)
 pip install uv                                                 # Alternative (PyPI)
@@ -65,7 +65,7 @@ uv pip install -r pyproject.toml
 uv pip compile pyproject.toml -o requirements.txt
 pip install -r requirements.txt
 ```
-4. Create a `Gemini 2.0 Flash` API key [here](https://aistudio.google.com/apikey)
+4. Create an API key for `Gemini 2.0 Flash` [here](https://aistudio.google.com/apikey)
 5. Create a `.env` file with the API key:
 ```bash
 GEMINI_API_KEY=...
@@ -92,7 +92,7 @@ README-translator-agent/
 - The agent only translates from Portuguese to English
 
 ## 🛠️ Troubleshooting
-**Q: Can I use another model instead of Gemini 2.0 Flash?**
+**Q: Can I use another model, instead of Gemini 2.0 Flash?**  
 **A:** Yes. If it is a Gemini model, you only need to change the model name (`model='gemini-2.0-flash-001'`). If it is another model, other modifications will be necessary, as the library (`from google import genai`) will not be useful.
 
 ## 🤝 How to Contribute
